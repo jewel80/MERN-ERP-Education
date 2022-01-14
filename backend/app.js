@@ -4,7 +4,8 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 
-
+//Route All Import File
+const DepartmentsRoutes = require('./routes/DepartmentRoutes');
 
 const path = require('path');
 //const __dirname = path.resolve(path.dirname(""));
@@ -24,6 +25,8 @@ app.use(express.static('./public'));
 app.get('/', (req, res) => {
   res.send('welcome to EDU-system ERP api');
 });
+
+app.use('/api/departments', DepartmentsRoutes);
 
 
 
