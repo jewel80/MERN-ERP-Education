@@ -2,12 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node app.js",
     "dev": "nodemon start"
   },
-  "author": "",
+  "author": "Jewel Rana",
   "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^17.1.1",

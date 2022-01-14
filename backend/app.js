@@ -22,7 +22,7 @@ app.use(express.static('./public'));
 
 //routes
 app.get('/', (req, res) => {
-  res.send('welcome to D-system api');
+  res.send('welcome to EDU-system ERP api');
 });
 
 
