@@ -6,6 +6,7 @@ dotenv.config();
 
 //Route All Import File
 const DepartmentsRoutes = require('./routes/DepartmentRoutes');
+const DeductionsRoutes = require('./routes/DeductionsRoutes');
 
 const path = require('path');
 //const __dirname = path.resolve(path.dirname(""));
@@ -27,6 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/departments', DepartmentsRoutes);
+app.use('/api/deductions', DeductionsRoutes);
 
 
 
