@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 //Route All Import File
+const ActivityRoutes = require('./routes/ActivityRoutes');
 const DepartmentsRoutes = require('./routes/DepartmentRoutes');
 const DeductionsRoutes = require('./routes/DeductionsRoutes');
 const DivisionRoutes = require('./routes/DivisionRoutes');
@@ -29,6 +30,7 @@ app.get('/', (req, res) => {
   res.send('welcome to EDU-system ERP api');
 });
 
+app.use('/api/activitylog', ActivityRoutes);
 app.use('/api/departments', DepartmentsRoutes);
 app.use('/api/deductions', DeductionsRoutes);
 app.use('/api/divisions', DivisionRoutes);
