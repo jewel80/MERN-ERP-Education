@@ -8,6 +8,7 @@ dotenv.config();
 const DepartmentsRoutes = require('./routes/DepartmentRoutes');
 const DeductionsRoutes = require('./routes/DeductionsRoutes');
 const DivisionRoutes = require('./routes/DivisionRoutes');
+const DormitoriesRoutes = require('./routes/DormitoriesRoutes');
 
 const path = require('path');
 //const __dirname = path.resolve(path.dirname(""));
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 app.use('/api/departments', DepartmentsRoutes);
 app.use('/api/deductions', DeductionsRoutes);
 app.use('/api/divisions', DivisionRoutes);
+app.use('/api/dormitories', DormitoriesRoutes);
 
 
 
