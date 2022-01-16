@@ -35,7 +35,6 @@ route.post("/create", async(req, res) => {
             code: code,
         })
         .then((doc) => {
-            console.log(doc);
             res.json({
                 success: true,
                 doc
@@ -50,5 +49,44 @@ route.post("/create", async(req, res) => {
         });
 });
 
+//edit
+route.put("/update/:id", (req, res) => {
+  if (!req.params.id) {
+    return res.status(400).send("Missing URL parameter: Department Name");
+  }
+  DepartmentsModel.findOneAndUpdate(
+    {
+      _id: req.params.id,
+    },
+    req.body,
+    {
+      new: true,
+    }
+  ).then((doc) => {
+      console.log(doc);
+      if (!doc) {
+        return res.json({ success: false, error: "doex not exists" });
+      }
+      return res.json({ success: true, doc });
+    })
+    .catch((err) => {
+      res.json({ success: false, message: err });
+    });
+});
+
+route.delete("/delete/:id", (req, res) => {
+  if (!req.params.id) {
+    return res.status(400).send("Missing URL parameter: username");
+  }
+  DepartmentsModel.findOneAndRemove({
+    _id: req.params.id,
+  })
+    .then((doc) => {
+      res.json(doc);
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
 
 module.exports = route;
