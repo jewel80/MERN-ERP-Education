@@ -15,6 +15,7 @@ const DeductionsRoutes = require('./routes/DeductionsRoutes');
 const DivisionRoutes = require('./routes/DivisionRoutes');
 const DormitoriesRoutes = require('./routes/DormitoriesRoutes');
 const FilesRoutes = require('./routes/FilesRoutes');
+const NonPaymentRoutes = require('./routes/NonBillPaymentRoutes');
 
 const path = require('path');
 //const __dirname = path.resolve(path.dirname(""));
@@ -45,6 +46,7 @@ app.use('/api/deductions', DeductionsRoutes);
 app.use('/api/divisions', DivisionRoutes);
 app.use('/api/dormitories', DormitoriesRoutes);
 app.use('/api/notes', FilesRoutes);
+app.use('/api/nonbillpayment', NonPaymentRoutes);
 
 
 
