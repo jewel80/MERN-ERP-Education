@@ -16,6 +16,7 @@ const DivisionRoutes = require('./routes/DivisionRoutes');
 const DormitoriesRoutes = require('./routes/DormitoriesRoutes');
 const FilesRoutes = require('./routes/FilesRoutes');
 const NonPaymentRoutes = require('./routes/NonBillPaymentRoutes');
+const NotificationRoutes = require('./routes/NotificationRoutes');
 
 const path = require('path');
 //const __dirname = path.resolve(path.dirname(""));
@@ -47,6 +48,7 @@ app.use('/api/divisions', DivisionRoutes);
 app.use('/api/dormitories', DormitoriesRoutes);
 app.use('/api/notes', FilesRoutes);
 app.use('/api/nonbillpayment', NonPaymentRoutes);
+app.use('/api/notification', NotificationRoutes);
 
 
 
