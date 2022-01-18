@@ -9,6 +9,7 @@ const ActivityRoutes = require('./routes/ActivityRoutes');
 const AttendanceRoutes = require("./routes/AttendanceRoutes");
 const BankingRoutes = require("./routes/BankingRoutes");
 const CalendarRoutes = require('./routes/CalendarRoutes');
+const CanteenRoutes = require('./routes/CanteenRouter');
 const CampusRoutes = require('./routes/CampusRoutes');
 const AcademicYear = require("./routes/CurrentYearRoutes");
 const CorrespondanceRoutes = require('./routes/CorrespondanceRoutes');
@@ -45,11 +46,12 @@ app.get('/', (req, res) => {
 
 app.use('/api/activitylog', ActivityRoutes);
 app.use("/api/attendance", AttendanceRoutes);
+app.use("/api/academicyear", AcademicYear);
 app.use("/api/banking", BankingRoutes);
 app.use('/api/calendar', CalendarRoutes);
 app.use('/api/campuses', CampusRoutes);
+app.use('/api/canteen', CanteenRoutes);
 app.use('/api/correspondance', CorrespondanceRoutes);
-app.use("/api/academicyear", AcademicYear);
 app.use('/api/departments', DepartmentsRoutes);
 app.use('/api/deductions', DeductionsRoutes);
 app.use('/api/divisions', DivisionRoutes);
