@@ -6,6 +6,7 @@ dotenv.config();
 
 //Route All Import File
 const ActivityRoutes = require('./routes/ActivityRoutes');
+const AttendanceRoutes = require("./routes/AttendanceRoutes");
 const CalendarRoutes = require('./routes/CalendarRoutes');
 const CampusRoutes = require('./routes/CampusRoutes');
 const AcademicYear = require("./routes/CurrentYearRoutes");
@@ -42,6 +43,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/activitylog', ActivityRoutes);
+app.use("/api/attendance", AttendanceRoutes);
 app.use('/api/calendar', CalendarRoutes);
 app.use('/api/campuses', CampusRoutes);
 app.use('/api/correspondance', CorrespondanceRoutes);
