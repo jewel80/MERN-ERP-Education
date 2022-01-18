@@ -18,6 +18,7 @@ const FilesRoutes = require('./routes/FilesRoutes');
 const NonPaymentRoutes = require('./routes/NonBillPaymentRoutes');
 const NotificationRoutes = require('./routes/NotificationRoutes');
 // const OptionsRoutes = require('./routes/OptionsRoutes');
+const PayrowRoutes = require("./routes/PayrowRoutes");
 
 const path = require('path');
 //const __dirname = path.resolve(path.dirname(""));
@@ -51,6 +52,7 @@ app.use('/api/notes', FilesRoutes);
 app.use('/api/nonbillpayment', NonPaymentRoutes);
 app.use('/api/notification', NotificationRoutes);
 // app.use('/api/options', OptionsRoutes);
+app.use("/api/payrow", PayrowRoutes);
 
 
 
