@@ -26,6 +26,7 @@ const NonPaymentRoutes = require('./routes/NonBillPaymentRoutes');
 const NotificationRoutes = require('./routes/NotificationRoutes');
 // const OptionsRoutes = require('./routes/OptionsRoutes');
 const PayrowRoutes = require("./routes/PayrowRoutes");
+const PaymentPlanRoutes = require("./routes/PaymentPlanRoutes");
 const PrefectsRoutes = require("./routes/PrefectsRoutes");
 const UsersRoutes = require("./routes/UsersRoutes");
 
@@ -69,6 +70,7 @@ app.use('/api/nonbillpayment', NonPaymentRoutes);
 app.use('/api/notification', NotificationRoutes);
 // app.use('/api/options', OptionsRoutes);
 app.use("/api/payrow", PayrowRoutes);
+app.use('/api/paymentplan', PaymentPlanRoutes);
 app.use("/api/prefects", PrefectsRoutes);
 app.use("/api/users", UsersRoutes);
 
