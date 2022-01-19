@@ -29,6 +29,7 @@ const PayrowRoutes = require("./routes/PayrowRoutes");
 const PaymentPlanRoutes = require("./routes/PaymentPlanRoutes");
 const PrefectsRoutes = require("./routes/PrefectsRoutes");
 const UsersRoutes = require("./routes/UsersRoutes");
+const SBARoutes = require("./routes/SBARoutes");
 
 const path = require('path');
 //const __dirname = path.resolve(path.dirname(""));
@@ -73,7 +74,7 @@ app.use("/api/payrow", PayrowRoutes);
 app.use('/api/paymentplan', PaymentPlanRoutes);
 app.use("/api/prefects", PrefectsRoutes);
 app.use("/api/users", UsersRoutes);
-
+app.use('/api/sba', SBARoutes);
 
 
 app.listen(PORT, () => {
