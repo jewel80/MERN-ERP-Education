@@ -30,6 +30,9 @@ const PaymentPlanRoutes = require("./routes/PaymentPlanRoutes");
 const PrefectsRoutes = require("./routes/PrefectsRoutes");
 const UsersRoutes = require("./routes/UsersRoutes");
 const SBARoutes = require("./routes/SBARoutes");
+const ScholarshipRoutes = require("./routes/ScholarshipRoutes");
+
+
 
 const path = require('path');
 //const __dirname = path.resolve(path.dirname(""));
@@ -44,6 +47,8 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/consumerPhotos'));
 app.use(express.static('./public'));
+
+
 
 //routes
 app.get('/', (req, res) => {
@@ -75,6 +80,7 @@ app.use('/api/paymentplan', PaymentPlanRoutes);
 app.use("/api/prefects", PrefectsRoutes);
 app.use("/api/users", UsersRoutes);
 app.use('/api/sba', SBARoutes);
+app.use('/api/scholarships', ScholarshipRoutes);
 
 
 app.listen(PORT, () => {
