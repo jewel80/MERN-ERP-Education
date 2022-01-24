@@ -33,6 +33,7 @@ const SBARoutes = require("./routes/SBARoutes");
 const ScholarshipRoutes = require("./routes/ScholarshipRoutes");
 const SchoolRoutes = require("./routes/SchoolRoutes");
 const SectionRoutes = require("./routes/SectionRoutes");
+const StaffPayRoutes = require("./routes/StaffPayRoutes");
 
 
 
@@ -85,6 +86,7 @@ app.use('/api/sba', SBARoutes);
 app.use('/api/scholarships', ScholarshipRoutes);
 app.use('/api/school', SchoolRoutes);
 app.use('/api/sections', SectionRoutes);
+app.use('/api/staffpay', StaffPayRoutes);
 
 
 app.listen(PORT, () => {
