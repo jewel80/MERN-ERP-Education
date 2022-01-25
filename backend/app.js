@@ -34,6 +34,7 @@ const ScholarshipRoutes = require("./routes/ScholarshipRoutes");
 const SchoolRoutes = require("./routes/SchoolRoutes");
 const SectionRoutes = require("./routes/SectionRoutes");
 const StaffPayRoutes = require("./routes/StaffPayRoutes");
+const StoreItemsRoutes = require("./routes/StoreItemsRoutes");
 
 
 
@@ -87,6 +88,7 @@ app.use('/api/scholarships', ScholarshipRoutes);
 app.use('/api/school', SchoolRoutes);
 app.use('/api/sections', SectionRoutes);
 app.use('/api/staffpay', StaffPayRoutes);
+app.use("/api/store/items", StoreItemsRoutes);
 
 
 app.listen(PORT, () => {
