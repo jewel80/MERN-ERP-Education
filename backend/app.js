@@ -36,6 +36,7 @@ const SectionRoutes = require("./routes/SectionRoutes");
 const StaffPayRoutes = require("./routes/StaffPayRoutes");
 const StoreItemsRoutes = require("./routes/StoreItemsRoutes");
 const StoreSalesRoutes = require("./routes/StoreSalesRoutes");
+const SSNITRoutes = require("./routes/SSNITRoutes");
 const TaskRoutes = require("./routes/TaskRoutes");
 const TeacherRoutes = require("./routes/TeacherRoutes");
 
@@ -93,6 +94,7 @@ app.use('/api/sections', SectionRoutes);
 app.use('/api/staffpay', StaffPayRoutes);
 app.use("/api/store/items", StoreItemsRoutes);
 app.use("/api/store/sales", StoreSalesRoutes);
+app.use("/api/ssnit", SSNITRoutes);
 app.use("/api/tasks", TaskRoutes);
 app.use("/api/teachers", TeacherRoutes);
 
